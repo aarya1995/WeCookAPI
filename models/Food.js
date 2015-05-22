@@ -10,16 +10,13 @@ var mongoose = require('mongoose');
 	for now
 */
 
-var UsersSchema = new mongoose.Schema ({
+var FoodSchema = new mongoose.Schema ({
 	name: String,
-	password: String,
-	email: String,
-	address: String,
-	phone: Number,
-	verified: Boolean,
+	description: String,
+	price: Number,
 	updated_at: { type: Date, default: Date.now },
 });
 
 // Exports a new Mongoose model of the 
 // defined schema to the application
-module.exports = mongoose.model('Users', UsersSchema);
+module.exports = mongoose.model('Menu', FoodSchema);
